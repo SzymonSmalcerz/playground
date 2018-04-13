@@ -9,6 +9,8 @@ let fetchCoords = (encodedAddress,callback) => {
       return callback("could not fetch data from server");
     }else if(body.status == "ZERO_RESULTS"){
       return callback("no data found for this location");
+    }else if(body.status == "OVER_QUERY_LIMIT"){
+      return callback("OVER_QUERY_LIMIT, you must wait, google's api limit :C ");
     }
     callback(null,body.results[0].geometry.location);
   })
