@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test-watch" : "nodemon --exec 'npm test'",
     "test": "mocha **/*.test.js"
   },
   "author": "",
