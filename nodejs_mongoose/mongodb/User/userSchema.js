@@ -15,6 +15,12 @@ module.exports = {
       minlength : 5,
       maxlength : 35,
       match : /^[a-zA-z0-9]+@[a-zA-z0-9]+\.[a-zA-z]+$/
+    },
+    age : {
+      type : Number,
+      required : true,
+      min : 0,
+      max : 200
     }
   })
 }
