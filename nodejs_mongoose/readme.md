@@ -14,6 +14,11 @@ saving model to database, quering db, updating and removing items.
 ### Prerequisites
 
 You need node.js and npm to run this application.  
+You also need running mongodb server on your computer
+(eventually you can connect to your hosted mongodb server).
+(If there is a problem with connection with database,
+check mongodb/connection.js file and check if port number
+is the same as in this file)
 
 ## Running application
 
