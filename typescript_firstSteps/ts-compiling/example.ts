@@ -1,6 +1,0 @@
-class Example {
-
-    name: string;
-
-
-}
