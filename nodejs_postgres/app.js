@@ -24,6 +24,11 @@ const {Op} = require("sequelize");
     where : {
       address : {
         [Op.like] : "%Circle%"
+      },
+      otherValues : {
+        firstValue : {
+          [Op.gte] : 8427710034264060
+        }
       }
     }
   })
