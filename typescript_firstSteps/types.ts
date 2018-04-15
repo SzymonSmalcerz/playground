@@ -1,6 +1,6 @@
 
 /*
-* first big (after all the biggest) diffrence between typescript and javascript
+* first big (after all the biggest) difference between typescript and javascript
 * are types, in ts you can assign type to variable, and then you can't assign
 * any other type to this variable
 */
