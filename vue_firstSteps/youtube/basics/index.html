@@ -85,6 +85,41 @@
         </span>
       </div>
 
+
+      <br>
+      <br>
+      <br>
+      <!-- CONDITIONALS -->
+      <button type="button" name="button" @click="checked = !checked">clicke me !</button>
+      <button type="button" name="button" @click="secondCheck = !secondCheck">clicke me 2 !</button>
+      <!-- if(checked){display whole div} -->
+      <!-- you can also use "v-show", difference is that "v-show" gives dom element "display : none" but normal conditional removes element from dom -->
+      <div v-if="checked">
+        <span>
+          Yo!
+        </span>
+      </div>
+      <div v-else-if="secondCheck">
+        <span>
+          !oY
+        </span>
+      </div>
+
+
+      <!-- LOOPING -->
+      <!-- will create 3 divs ( + whatever is inside) -->
+      <div v-for="person in people">
+        {{person}}
+      </div>
+      <!-- will create not create 3 divs but 3 x whatever is in template:) -->
+      <template v-for="(person,index) in people">
+        <ul>
+          <li v-for="(value,key) in person">
+            {{key}} : {{value}}
+          </li>
+        </ul>
+      </template>
+
     </div>
   <script src="./js/app.js" charset="utf-8"></script>
   </body>

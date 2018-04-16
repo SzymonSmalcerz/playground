@@ -13,7 +13,26 @@ let viewModel = new Vue({
     a : 0,
     b : 0,
     greenBck : false,
-    nearbyElement : false
+    nearbyElement : false,
+    checked : false,
+    secondCheck : true,
+    people : {
+      person_1 : {
+        name : "szymon",
+        age : 22
+      },
+      person_2 : {
+        name : "asddsa",
+        age : 24,
+        a : "678"
+      },
+      person_3 : {
+        name : "szymonggga",
+        age : 23,
+        b : 999,
+        c : true
+      }
+    }
   },
   methods : {
     greet : function(time) {
