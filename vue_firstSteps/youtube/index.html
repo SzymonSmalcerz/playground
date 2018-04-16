@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vue tutorial</title>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+  <body>
+    <div id="vue-app" @keyup="togglecase">
+      <h1>{{ greet('morning') }}</h1>
+
+      <br>
+      <br>
+      <br>
+      <!-- Data binding in vue : -->
+      <!-- <a :href="website">google</a> -->
+      <!-- OR ('v-bind' or just ':' to bind property)-->
+      <a v-bind:href="website">google</a>
+      <input type="text" name="" v-bind:value="website">
+      <p v-html="websiteTag"></p>
+
+      <br>
+      <br>
+      <br>
+      <!-- EVENTS -->
+      <!-- "v-on" or "@", google DOM events for more events (like doubleclick etc) -->
+      <!-- DO SOMETHING ON VARIABLE INSIDE "DATA" -->
+      <button type="button" name="button" v-on:click="age++">add a year</button>
+      <!-- OR CALL THE FUNCTION FROM "METHODS "-->
+      <button type="button" name="button" @click="subtract">substract a year</button>
+      my age is {{ age }}
+      <button type="button" name="button" @dblclick="subtract(10)">substract 10 from age (dblclick)</button>
+      <div id="canvas" v-on:mousemove="updateXY">
+        {{x}} , {{y}}
+      </div>
+
+      <br>
+      <br>
+      <br>
+      <!-- EVENTS MODIFIER (google vue event modifiers for more, some simple examples below)-->
+      <!-- add 100 years but only once -->
+      <button type="button" name="button" v-on:click.once="age+=100">add 100 years (only once)</button>
+      <!-- prevent default behavior -->
+      <a v-bind:href="website" v-on:click.prevent>google</a>
+
+
+      <br>
+      <br>
+      <br>
+      <!-- TWO WAY DATA BINDING -->
+      <!-- in vue you can bind data using "v-model", example (see in browser for yourself): -->
+      <label for="name">Enter your name:</label>
+      <input type="text" name="name" v-model="name">
+      <label for="age">Enter your age:</label>
+      <input type="text" name="age" v-model="age">
+      Hi {{name}} you are {{age}}
+
+
+      <br>
+      <br>
+      <br>
+      <!-- COMPUTED PROPERTIES -->
+      <!-- when you change some data in vue, all methods are triggered -->
+      <!-- so computed properties are "methods" which runs only when -->
+      <!-- property which they use is changed (they watch on propertis) -->
+      <h4 v-on:click="a++">click on me to increment a</h4>
+      <h4 v-on:click="b++">click on me to increment b</h4>
+      a : {{a}}
+      b : {{b}}
+      age + a : {{addToA}}
+      age + b : {{addToB}}
+
+
+      <br>
+      <br>
+      <br>
+      <!-- DYNAMIC CSS CLASSES -->
+      <div v-bind:class="setClasses">
+        <h5 @click="greenBck = !greenBck">click me to toggle green background class !</h5>
+        <h5 @click="nearbyElement = !nearbyElement">click me to toggle nearby element class !</h5>
+        <span>
+          Hi!
+        </span>
+      </div>
+
+    </div>
+  <script src="./js/app.js" charset="utf-8"></script>
+  </body>
+</html>
