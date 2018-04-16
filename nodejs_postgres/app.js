@@ -19,7 +19,7 @@ const {Op} = require("sequelize");
 
 
   // first step find all with "Circle" in address (after feeding db with 1000 random addresses you should find at least one)
-  console.log("FETCHING ALL USERS:")
+
   await ApartmentData3.findAll({
     where : {
       address : {
