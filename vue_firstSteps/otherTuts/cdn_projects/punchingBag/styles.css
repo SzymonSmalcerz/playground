@@ -1,0 +1,27 @@
+
+#bag {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#bag_health {
+  border : 2px solid black;
+  width : 50%;
+  margin : auto;
+}
+#bag_health {
+  border : 2px solid black;
+}
+
+#bag_health div {
+  height : 20px;
+  width : 100%;
+  background-color: crimson;
+}
+
+#bag_buttons {
+  margin-left: 55%;
+  padding : 10px;
+  transform: translate(-50%,0);
+}
